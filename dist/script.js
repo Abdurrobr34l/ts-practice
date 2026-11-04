@@ -1,3 +1,2 @@
-import { greeting } from "./v1.js";
-greeting();
-// console.log("Hello World");
+"use strict";
+console.log("Hello World");
