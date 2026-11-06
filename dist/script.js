@@ -26,3 +26,20 @@
 // let marks : readonly number[] = [45345, 2451646]
 // marks.push(65) push doesnot exist on readonly
 // console.log(marks)
+//* Task 1-8
+//? Write introduce(name: string, age?: number): string. If age is given, return "I am Rob, 25 years old". If not, return "I am Rob".
+// const introduce = (name: string, age?: number): string => {
+//   if (age) {
+//     return `My name is ${name}, my age is ${age}`;
+//   } else {
+//     return `My name is ${name}`;
+//   }
+// };
+// console.log(introduce("Abdur Rob", 24));
+// console.log(introduce("Abdur Rob"));
+//? Write calculatePrice(price: number, tax: number = 5): number that returns price + tax. Call it with one argument and then with two.
+// const calculatePrice = (price: number, tax: number = 5): number => {
+//   return price + tax;
+// };
+// console.log(calculatePrice(250, 13.6));
+// console.log(calculatePrice(250));
