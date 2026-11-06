@@ -44,3 +44,25 @@
 // type Result = string | number;
 // interface InterfaceResult {
 // }
+
+//* Task 2-4
+//? Make let data: unknown = "TypeScript". Then use typeof to check it’s a string, and print data.toUpperCase() only inside the check.
+// let data: unknown = "TypeScript";
+// if (typeof data === "string") {
+//   console.log(data.toUpperCase());
+// }
+
+//? Write function sayHi(name: string): void that only logs Hello, name.
+// const sayHi = (name: string): void => {
+//   console.log(`Hello, ${name}`);
+// };
+// sayHi("Raihan");
+
+//? Write function throwError(msg: string): never that throws an error.
+// const throwError = (msg: string): never => {
+//   throw new Error(msg);
+// };
+// throwError("Raihan");
+
+//? In a comment, answer: why is unknown safer than any?
+// Unknow questions you "Are you sure is it the same type stated above?", where in any it does not does anything like that, it simply allows anytype(which is simply like making the typescript work like Vanilla JS)
