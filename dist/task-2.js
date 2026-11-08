@@ -58,3 +58,58 @@
 // throwError("Raihan");
 //? In a comment, answer: why is unknown safer than any?
 // Unknow questions you "Are you sure is it the same type stated above?", where in any it does not does anything like that, it simply allows anytype(which is simply like making the typescript work like Vanilla JS)
+//* Task 2-6
+//? Make let input: unknown = "TypeScript". Use as string to print its .length.
+// let input: unknown = "TypeScript"
+// console.log((input as string).length);
+//? Make let price: unknown = 100. Use as number to print price * 2.
+// let price: unknown = 100
+// console.log((price as number) * 2);
+//? In a comment, answer: what is the risk of as? Add an example that compiles but would crash at runtime. Don’t run it, just write it.
+// If i lie or add a wrong datatype to an value then it will not get error before run time
+// let exm: unknown = "JS"
+// console.log((exm as number).toFixed(2));
+//* Task 2-7/2-8
+//? Write function describe(x: string | number | boolean): string. Use typeof to return "Text: ...", "Number: ..." or "Boolean: ...". Test all three.
+const describe = (x) => {
+    if (typeof x === "string") {
+        return `Text: ${x}`;
+    }
+    else if (typeof x === "number") {
+        return `Number: ${x}`;
+    }
+    else {
+        return `Boolean: ${x}`;
+    }
+};
+console.log(describe("Hello"));
+console.log(describe(25));
+console.log(describe(true));
+//? Write function isBigger(a: string | number): number. If it’s a string, return its .length. If it’s a number, return the number itself. Test both.
+function isBigger(a) {
+    if (typeof a === "number") {
+        return a;
+    }
+    else {
+        return a.length;
+    }
+}
+console.log(isBigger("Hello"));
+console.log(isBigger(25));
+const myCat = {
+    meaow: "Meow meow!",
+};
+const myDog = {
+    woof: "Woof woof!",
+};
+function speak(animal) {
+    if ("meaow" in animal) {
+        return animal.meaow;
+    }
+    else {
+        return animal.woof;
+    }
+}
+console.log(speak(myCat));
+console.log(speak(myDog));
+if ("circle" in Circle.kind) { }
