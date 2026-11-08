@@ -83,65 +83,86 @@
 
 //* Task 2-7/2-8
 //? Write function describe(x: string | number | boolean): string. Use typeof to return "Text: ...", "Number: ..." or "Boolean: ...". Test all three.
-const describe = (x: string | number | boolean): string => {
-  if (typeof x === "string") {
-    return `Text: ${x}`;
-  } else if (typeof x === "number") {
-    return `Number: ${x}`;
-  } else {
-    return `Boolean: ${x}`;
-  }
-};
-console.log(describe("Hello"));
-console.log(describe(25));
-console.log(describe(true));
+// const describe = (x: string | number | boolean): string => {
+//   if (typeof x === "string") {
+//     return `Text: ${x}`;
+//   } else if (typeof x === "number") {
+//     return `Number: ${x}`;
+//   } else {
+//     return `Boolean: ${x}`;
+//   }
+// };
+// console.log(describe("Hello"));
+// console.log(describe(25));
+// console.log(describe(true));
 
 //? Write function isBigger(a: string | number): number. If it’s a string, return its .length. If it’s a number, return the number itself. Test both.
-function isBigger(a: string | number): number {
-  if (typeof a === "number") {
-    return a;
-  } else {
-    return a.length;
-  }
-}
-console.log(isBigger("Hello"));
-console.log(isBigger(25));
+// function isBigger(a: string | number): number {
+//   if (typeof a === "number") {
+//     return a;
+//   } else {
+//     return a.length;
+//   }
+// }
+// console.log(isBigger("Hello"));
+// console.log(isBigger(25));
 
 //? Make the Cat | Dog types above and write speak using in. Test with one cat and one dog object.
-type Cat = {
-  meaow: string;
-};
-type Dog = {
-  woof: string;
-};
+// type Cat = {
+//   meaow: string;
+// };
+// type Dog = {
+//   woof: string;
+// };
 
-const myCat: Cat = {
-  meaow: "Meow meow!",
-};
+// const myCat: Cat = {
+//   meaow: "Meow meow!",
+// };
 
-const myDog: Dog = {
-  woof: "Woof woof!",
-};
+// const myDog: Dog = {
+//   woof: "Woof woof!",
+// };
 
-function speak(animal: Cat | Dog) {
-  if ("meaow" in animal) {
-    return animal.meaow;
-  } else {
-    return animal.woof;
-  }
-}
+// function speak(animal: Cat | Dog) {
+//   if ("meaow" in animal) {
+//     return animal.meaow;
+//   } else {
+//     return animal.woof;
+//   }
+// }
 
-console.log(speak(myCat));
-console.log(speak(myDog));
+// console.log(speak(myCat));
+// console.log(speak(myDog));
 
 //? Make the Circle | Square types and write area using the kind check. Test both shapes.
-type Circle = {
-  kind: "circle";
-  circleValue: number;
-};
-type Square = {
-  kind: "square";
-  squareValue: number;
-};
+// type Circle = {
+//   kind: "circle";
+//   circleValue: number;
+// };
+// type Square = {
+//   kind: "square";
+//   squareValue: number;
+// };
 
-// if("circle" in Circle.kind) {}
+// type Shape = Circle | Square;
+
+// function area(shape: Shape): number {
+//   if (shape.kind === "circle") {
+//     return Math.PI * shape.circleValue ** 2;
+//   } else {
+//     return shape.squareValue ** 2;
+//   }
+// }
+
+// const myCircle: Circle = {
+//   kind: "circle",
+//   circleValue: 5,
+// };
+
+// const mySquare: Square = {
+//   kind: "square",
+//   squareValue: 4,
+// };
+
+// console.log(area(myCircle));
+// console.log(area(mySquare));
